@@ -1,0 +1,13 @@
+development: &common
+  adapter: postgresql
+  database: <%= Rails.application.class.parent_name.underscore %>
+  host: localhost
+  encoding: unicode
+  min_messages: WARNING
+
+production:
+  <<: *common
+
+test:
+  <<: *common
+  database: <%= Rails.application.class.parent_name.underscore %>_test
