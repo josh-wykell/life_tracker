@@ -10,6 +10,7 @@ class LifeEventsController < ApplicationController
   # GET /life_events/1
   # GET /life_events/1.json
   def show
+    @life_events = LifeEvent.find(params[:id])
   end
 
   # GET /life_events/new

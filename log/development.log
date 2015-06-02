@@ -665,3 +665,1038 @@ Processing by SchoolsController#index as HTML
   [1m[35mSchool Load (0.8ms)[0m  SELECT "schools".* FROM "schools"
   Rendered schools/index.html.erb within layouts/application (2.3ms)
 Completed 200 OK in 76ms (Views: 74.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 21:53:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolsController#index as HTML
+  [1m[35mSchool Load (0.7ms)[0m  SELECT "schools".* FROM "schools"
+  Rendered schools/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 275ms (Views: 255.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 21:53:53 -0400
+
+
+Started GET "/assets/life_events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/assets/scaffolds.self-869be571e1327ce7e55904a7f7ab618e82840fbbf673374fa659dea834843bd6.css?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/assets/schools.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/assets/life_events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 21:53:54 -0400
+
+
+Started GET "/" for ::1 at 2015-06-01 21:54:07 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 21:54:10 -0400
+Processing by LifeEventsController#index as HTML
+  [1m[36mLifeEvent Load (2.0ms)[0m  [1mSELECT "life_events".* FROM "life_events"[0m
+  Rendered life_events/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 84ms (Views: 77.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/life_events/new" for ::1 at 2015-06-01 21:54:14 -0400
+Processing by LifeEventsController#new as HTML
+  Rendered life_events/_form.html.erb (49.5ms)
+  Rendered life_events/new.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 103ms (Views: 97.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/life_events" for ::1 at 2015-06-01 21:54:36 -0400
+Processing by LifeEventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5M+Smii0MRK8ojmCDOK3FBT32MNsgzP4gDTnFeDU1A1v4P7npc16C5VIZ1URFUIyB/HIsyFb1p8aCii3Evq+zA==", "life_event"=>{"title"=>"I am here", "date(1i)"=>"2015", "date(2i)"=>"6", "date(3i)"=>"2", "description"=>"Here I am bro"}, "commit"=>"Create Life event"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "life_events" ("title", "description", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I am here"], ["description", "Here I am bro"], ["date", "2015-06-02"], ["created_at", "2015-06-02 01:54:36.502142"], ["updated_at", "2015-06-02 01:54:36.502142"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/life_events/1
+Completed 302 Found in 14ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/life_events/1" for ::1 at 2015-06-01 21:54:36 -0400
+Processing by LifeEventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLifeEvent Load (0.3ms)[0m  [1mSELECT  "life_events".* FROM "life_events" WHERE "life_events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "life_events".* FROM "life_events" WHERE "life_events"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered life_events/show.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `home_path' for #<#<Class:0x007fb1f6cc95c0>:0x007fb1f499f630>):
+    17: 
+    18: <%= link_to 'Edit', edit_life_event_path(@life_event) %> |
+    19: <%= link_to 'Back', life_events_path %> |
+    20: <%= link_to 'Life Events', home_path %>
+  app/views/life_events/show.html.erb:20:in `_app_views_life_events_show_html_erb___1720102633747495068_70201144832500'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (54.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (115.0ms)
+
+
+Started GET "/life_events/1" for ::1 at 2015-06-01 21:58:28 -0400
+Processing by LifeEventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLifeEvent Load (0.4ms)[0m  [1mSELECT  "life_events".* FROM "life_events" WHERE "life_events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "life_events".* FROM "life_events" WHERE "life_events"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered life_events/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/life_events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/scaffolds.self-869be571e1327ce7e55904a7f7ab618e82840fbbf673374fa659dea834843bd6.css?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/life_events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/schools.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-06-01 21:58:28 -0400
+
+
+Started GET "/" for ::1 at 2015-06-01 21:58:31 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 21:59:08 -0400
+Processing by LifeEventsController#index as HTML
+  [1m[36mLifeEvent Load (0.3ms)[0m  [1mSELECT "life_events".* FROM "life_events"[0m
+  Rendered life_events/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 21:59:49 -0400
+Processing by LifeEventsController#index as HTML
+  [1m[35mLifeEvent Load (0.3ms)[0m  SELECT "life_events".* FROM "life_events"
+  Rendered life_events/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/life_events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/scaffolds.self-869be571e1327ce7e55904a7f7ab618e82840fbbf673374fa659dea834843bd6.css?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/life_events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/schools.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-06-01 21:59:49 -0400
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 22:02:02 -0400
+Processing by LifeEventsController#index as HTML
+  [1m[36mLifeEvent Load (0.9ms)[0m  [1mSELECT "life_events".* FROM "life_events"[0m
+  Rendered life_events/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/scaffolds.self-869be571e1327ce7e55904a7f7ab618e82840fbbf673374fa659dea834843bd6.css?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/life_events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/life_events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/schools.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 22:02:02 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-06-01 22:02:03 -0400
+
+
+Started GET "/" for ::1 at 2015-06-01 22:02:05 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:02:06 -0400
+Processing by SchoolsController#index as HTML
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools"
+  Rendered schools/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-06-01 22:02:10 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-01 22:08:13 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 36ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 22:08:16 -0400
+Processing by LifeEventsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/life_event.rb:3: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+              length: {minimum 5}
+                                ^):
+  app/models/life_event.rb:3: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+  app/controllers/life_events_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (92.1ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 22:08:16 -0400
+Processing by LifeEventsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/life_event.rb:3: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+              length: {minimum 5}
+                                ^):
+  app/models/life_event.rb:3: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+  app/controllers/life_events_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (40.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (90.7ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 22:09:22 -0400
+Processing by LifeEventsController#index as HTML
+  [1m[36mLifeEvent Load (0.4ms)[0m  [1mSELECT "life_events".* FROM "life_events"[0m
+  Rendered life_events/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-06-01 22:11:00 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 22:11:01 -0400
+Processing by LifeEventsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/life_event.rb:4: syntax error, unexpected ',', expecting keyword_end
+            :description, presence: true,
+                         ^
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/life_event.rb:4: Can't assign to true):
+  app/models/life_event.rb:4: syntax error, unexpected ',', expecting keyword_end
+  app/models/life_event.rb:4: Can't assign to true
+  app/controllers/life_events_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (93.4ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 22:11:01 -0400
+Processing by LifeEventsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/life_event.rb:4: syntax error, unexpected ',', expecting keyword_end
+            :description, presence: true,
+                         ^
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/life_event.rb:4: Can't assign to true):
+  app/models/life_event.rb:4: syntax error, unexpected ',', expecting keyword_end
+  app/models/life_event.rb:4: Can't assign to true
+  app/controllers/life_events_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (38.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.8ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 22:11:51 -0400
+Processing by LifeEventsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ArgumentError (Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.):
+  app/models/life_event.rb:4:in `<class:LifeEvent>'
+  app/models/life_event.rb:1:in `<top (required)>'
+  app/controllers/life_events_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (92.1ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 22:11:52 -0400
+Processing by LifeEventsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ArgumentError (Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.):
+  app/models/life_event.rb:4:in `<class:LifeEvent>'
+  app/models/life_event.rb:1:in `<top (required)>'
+  app/controllers/life_events_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (43.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (95.2ms)
+
+
+Started GET "/life_events" for ::1 at 2015-06-01 22:12:11 -0400
+Processing by LifeEventsController#index as HTML
+  [1m[35mLifeEvent Load (0.3ms)[0m  SELECT "life_events".* FROM "life_events"
+  Rendered life_events/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 53ms (Views: 48.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:15:55 -0400
+Processing by SchoolsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :start_year, presence: true,
+             ^
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: Can't assign to true
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :end_year, presence: true,
+             ^
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:4: Can't assign to true
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :start_year <= :end_year
+             ^):
+  app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/school.rb:3: Can't assign to true
+  app/models/school.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/school.rb:4: Can't assign to true
+  app/models/school.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/schools_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (35.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (83.2ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:15:55 -0400
+Processing by SchoolsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :start_year, presence: true,
+             ^
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: Can't assign to true
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :end_year, presence: true,
+             ^
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:4: Can't assign to true
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :start_year <= :end_year
+             ^):
+  app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/school.rb:3: Can't assign to true
+  app/models/school.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/school.rb:4: Can't assign to true
+  app/models/school.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/schools_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (40.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (93.3ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:23:04 -0400
+Processing by SchoolsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :start_year, numericality: true,
+             ^
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: Can't assign to true
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:4: syntax error, unexpected '{', expecting :: or '[' or '.'
+              :less_than_or_equal_to { :end_year }
+                                      ^):
+  app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/school.rb:3: Can't assign to true
+  app/models/school.rb:4: syntax error, unexpected '{', expecting :: or '[' or '.'
+  app/controllers/schools_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (40.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.6ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:23:04 -0400
+Processing by SchoolsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :start_year, numericality: true,
+             ^
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: Can't assign to true
+/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:4: syntax error, unexpected '{', expecting :: or '[' or '.'
+              :less_than_or_equal_to { :end_year }
+                                      ^):
+  app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/school.rb:3: Can't assign to true
+  app/models/school.rb:4: syntax error, unexpected '{', expecting :: or '[' or '.'
+  app/controllers/schools_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (46.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (94.2ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:24:37 -0400
+Processing by SchoolsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :start_year, :less_than_or_equal_to { :end_year }
+             ^):
+  app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/schools_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (93.5ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:25:04 -0400
+Processing by SchoolsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :start_year, :less_than_or_equal_to { 3000 }
+             ^):
+  app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/schools_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (38.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (93.3ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:25:08 -0400
+Processing by SchoolsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :start_year, :less_than_or_equal_to { 3000 }
+             ^):
+  app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/schools_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (84.6ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:25:08 -0400
+Processing by SchoolsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :start_year, :less_than_or_equal_to { 3000 }
+             ^):
+  app/models/school.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/schools_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (94.1ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:26:51 -0400
+Processing by SchoolsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:4: syntax error, unexpected keyword_end):
+  app/models/school.rb:4: syntax error, unexpected keyword_end
+  app/controllers/schools_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (40.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (98.9ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-01 22:27:21 -0400
+Processing by SchoolsController#index as HTML
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools"[0m
+  Rendered schools/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 78ms (Views: 68.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/scaffolds.self-869be571e1327ce7e55904a7f7ab618e82840fbbf673374fa659dea834843bd6.css?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/life_events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/life_events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/schools.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-06-01 22:27:21 -0400
+
+
+Started GET "/schools/new" for ::1 at 2015-06-01 22:27:23 -0400
+Processing by SchoolsController#new as HTML
+  Rendered schools/_form.html.erb (6.9ms)
+  Rendered schools/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/new" for ::1 at 2015-06-01 22:28:11 -0400
+Processing by SchoolsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:4: syntax error, unexpected keyword_end):
+  app/models/school.rb:4: syntax error, unexpected keyword_end
+  app/controllers/schools_controller.rb:17:in `new'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.2ms)
+
+
+Started GET "/schools/new" for ::1 at 2015-06-01 22:28:11 -0400
+Processing by SchoolsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/joshuawykell/TIY/homework/life_tracker/app/models/school.rb:4: syntax error, unexpected keyword_end):
+  app/models/school.rb:4: syntax error, unexpected keyword_end
+  app/controllers/schools_controller.rb:17:in `new'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (44.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (95.3ms)
+
+
+Started GET "/schools/new" for ::1 at 2015-06-02 09:02:52 -0400
+Processing by SchoolsController#new as HTML
+  Rendered schools/_form.html.erb (10.3ms)
+  Rendered schools/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 216ms (Views: 172.7ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/scaffolds.self-869be571e1327ce7e55904a7f7ab618e82840fbbf673374fa659dea834843bd6.css?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/life_events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/life_events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/schools.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-06-02 09:02:53 -0400
+
+
+Started GET "/schools/new" for ::1 at 2015-06-02 09:14:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolsController#new as HTML
+  Rendered schools/_form.html.erb (34.8ms)
+  Rendered schools/new.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 311ms (Views: 291.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-02 09:17:05 -0400
+Processing by SchoolsController#index as HTML
+  [1m[35mSchool Load (0.8ms)[0m  SELECT "schools".* FROM "schools"
+  Rendered schools/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/schools/new" for ::1 at 2015-06-02 09:17:07 -0400
+Processing by SchoolsController#new as HTML
+  Rendered schools/_form.html.erb (2.1ms)
+  Rendered schools/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/new" for ::1 at 2015-06-02 09:18:47 -0400
+Processing by SchoolsController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.1ms)
+
+NameError (undefined local variable or method `end_year' for #<Class:0x007fc323632e80>):
+  app/models/school.rb:4:in `<class:School>'
+  app/models/school.rb:1:in `<top (required)>'
+  app/controllers/schools_controller.rb:17:in `new'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (52.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (125.5ms)
+
+
+Started GET "/schools/new" for ::1 at 2015-06-02 09:18:47 -0400
+Processing by SchoolsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `end_year' for #<Class:0x007fc324a58748>):
+  app/models/school.rb:4:in `<class:School>'
+  app/models/school.rb:1:in `<top (required)>'
+  app/controllers/schools_controller.rb:17:in `new'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (90.8ms)
+
+
+Started GET "/schools/new" for ::1 at 2015-06-02 09:19:02 -0400
+Processing by SchoolsController#new as HTML
+  Rendered schools/_form.html.erb (3.2ms)
+  Rendered schools/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 56ms (Views: 49.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/life_events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/scaffolds.self-869be571e1327ce7e55904a7f7ab618e82840fbbf673374fa659dea834843bd6.css?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/life_events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/schools.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-06-02 09:19:03 -0400
+
+
+Started POST "/schools" for ::1 at 2015-06-02 09:20:02 -0400
+Processing by SchoolsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rckt2EDx4uLANogA5kjRMW66bEKp+tYRleEwBK8kU67O5kGlzYip++nc1tf7vyQXfbx8MuQiM3YP3/+mXQo5bw==", "school"=>{"name"=>"Goober U", "start_year"=>"1999", "end_year"=>"1998"}, "commit"=>"Create School"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered schools/_form.html.erb (3.0ms)
+  Rendered schools/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-02 09:20:18 -0400
+Processing by SchoolsController#index as HTML
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools"[0m
+  Rendered schools/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-02 09:26:59 -0400
+Processing by SchoolsController#index as HTML
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools"
+  Rendered schools/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/scaffolds.self-869be571e1327ce7e55904a7f7ab618e82840fbbf673374fa659dea834843bd6.css?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/life_events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/life_events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/schools.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-06-02 09:26:59 -0400
+
+
+Started GET "/" for ::1 at 2015-06-02 09:27:01 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools" for ::1 at 2015-06-02 09:27:03 -0400
+Processing by SchoolsController#index as HTML
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools"[0m
+  Rendered schools/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-06-02 09:27:05 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
