@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :life_events
   resources :schools
+  resources :people
   root 'home#index'
 
   # Example of regular route:
