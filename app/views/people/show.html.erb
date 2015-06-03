@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name</strong>
+  <%= @person.name %>
+</p>
+
+<ul>
+  <% @person.schools.each do |school| %>
+    <li><%= school.name %>(<%= school.start_year %> - <%= school.end_year %>)</li>
+  <% end %>
+</ul>
+
