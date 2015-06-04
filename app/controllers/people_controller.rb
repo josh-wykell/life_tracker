@@ -6,13 +6,21 @@ class PeopleController < ApplicationController
   end
 
   def show
-    # @person.school
-    # @person.life_events
+    @person = Person.find(params[:id])
+    @schools = @person.schools.order(start_year: :desc)
+    @life_events = @person.life_events.order(date: :desc)
   end
 
   def create
     @person = Person.create(person_params)
-    redirect_to @person, notice: 'New Person Created'
+    
+    # respond_to do |format|
+    #   if @person.save
+    #     redirect_to @person, notice: 'New Person Created'
+    #   else
+    #     render :new
+    #   end
+    # end
   end
 
   def destroy
@@ -22,6 +30,16 @@ class PeopleController < ApplicationController
 
   def new
     @person = Person.new
+  end
+
+  def update
+    respond_to do |format|
+      if @person.update(person_params)
+        format.html { redirect_to @person, notice: 'Person was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
   end
 
   private

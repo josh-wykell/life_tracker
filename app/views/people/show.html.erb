@@ -1,13 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name</strong>
-  <%= @person.name %>
+  <strong>This is</strong>
+  <%= @person.name %>'s life
 </p>
+
+<H3>Schools</H3>
 
 <ul>
   <% @person.schools.each do |school| %>
     <li><%= school.name %>(<%= school.start_year %> - <%= school.end_year %>)</li>
   <% end %>
 </ul>
+
+<H3>Life Events</H3>
+
+<ul>
+  <% @person.life_events.each do |life_event| %>
+  <li><h4><%= life_event.title %></h4>
+      <h5><%= life_event.date %></h5>
+      <p><%= life_event.description %></p>
+  </li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Back', people_path %>
+<%= link_to 'Life Tracker Home', controller: 'home' %>
+
 
