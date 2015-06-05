@@ -8,7 +8,7 @@
 <H3>Schools</H3>
 
 <ul>
-  <% @person.schools.each do |school| %>
+  <% @schools.each do |school| %>
     <li><%= school.name %>(<%= school.start_year %> - <%= school.end_year %>)</li>
   <% end %>
 </ul>

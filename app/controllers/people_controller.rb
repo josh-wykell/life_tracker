@@ -7,20 +7,13 @@ class PeopleController < ApplicationController
 
   def show
     @person = Person.find(params[:id])
-    @schools = @person.schools.order(start_year: :desc)
-    @life_events = @person.life_events.order(date: :desc)
+    @schools = @person.schools.order(:start_year)
+    @life_events = @person.life_events.order(:date)
   end
 
   def create
-    @person = Person.create(person_params)
-    
-    # respond_to do |format|
-    #   if @person.save
-    #     redirect_to @person, notice: 'New Person Created'
-    #   else
-    #     render :new
-    #   end
-    # end
+   @person = Person.create(person_params)
+   redirect_to @person, notice: 'New Person Created'
   end
 
   def destroy
